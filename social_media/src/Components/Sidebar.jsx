@@ -15,7 +15,8 @@ import {
   Box,
 } from "@mui/material";
 
-const drawerWidth = 240;
+const LDrawerWidth = 240;
+const RDrawerWidth = 280;
 
 const iconStyle = {
   height: "22px",
@@ -33,10 +34,10 @@ const Sidebar = () => {
       <CssBaseline />
       <Drawer
         sx={{
-          width: drawerWidth,
+          width: LDrawerWidth,
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: drawerWidth,
+            width: LDrawerWidth,
             boxSizing: "border-box",
           },
         }}
@@ -83,6 +84,18 @@ const Sidebar = () => {
           </ListItem>
         </List>
       </Drawer>
+      <Drawer
+        sx={{
+          width: RDrawerWidth,
+          flexShrink: 0,
+          "& .MuiDrawer-paper": {
+            width: RDrawerWidth,
+            boxSizing: "border-box",
+          },
+        }}
+        variant="permanent"
+        anchor="right"
+      ></Drawer>
     </Box>
   );
 };

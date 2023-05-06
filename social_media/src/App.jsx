@@ -1,13 +1,11 @@
-import { useState } from "react";
+import { react } from "react";
 import Sidebar from "./Components/Sidebar";
-
+import "./Styles/App.css";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <div className="app">
       <Sidebar />
-    </>
+    </div>
   );
 }
 
