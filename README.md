@@ -11,19 +11,18 @@ Details : Register : Username,Email,Password
   Suggestions -> { Users }
 3) Profile -> { UserBannerImg , UserdetailsCard}
 
-Library:
+## Libraries used:  
+### 1. Frontend:
+  react-router  
+  redux-toolkit  
+  material-ui  
+  storybook  
+  react-icons  
 
-Frontend
-  react-router
-  redux-toolkit
-  material-ui
-  storybook
+### 2. Backend:   ExpressJS  
+Mongoose  
+Socket.io  
 
-Backend :
-
-ExpressJS
-Mongoose
-Socket.io
 
 
 
