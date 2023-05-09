@@ -5,7 +5,7 @@ import { TfiSearch } from "react-icons/tfi";
 /*
 Not using Material for the Searchbar as the code written for it exceeds the vanilla code Styling is also very difficult to implement. */
 
-const SearchBar = ({ setSearchQuery }) => {
+const SearchBar = () => {
   const submitHandler = (e) => {
     e.preventDefault();
   };

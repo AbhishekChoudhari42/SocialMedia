@@ -2,7 +2,6 @@ import React from "react";
 import "../Styles/UserCard.css";
 
 const UserCard = ({ name }) => {
-  console.log(name);
   return (
     <>
       <div className="user-card">
