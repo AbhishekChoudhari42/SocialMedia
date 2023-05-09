@@ -1,7 +1,7 @@
 import React from "react";
-import RightSideBar from "./Sidebars/RightSideBar";
-import TopSideBar from "./Sidebars/TopSideBar";
-import LeftSideBar from "./Sidebars/LeftSideBar";
+import RightSideBar from "./RightSideBar";
+import TopSideBar from "./TopSideBar";
+import LeftSideBar from "./LeftSideBar";
 import { CssBaseline, Box } from "@mui/material";
 
 const LDrawerWidth = 240;
