@@ -4,6 +4,7 @@ import { BsFillChatFill } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { FiLogOut } from "react-icons/fi";
 import SearchBar from "./SearchBar";
+import UserCard from "./UserCard";
 import {
   Typography,
   ListItemText,
@@ -17,7 +18,7 @@ import {
 } from "@mui/material";
 
 const LDrawerWidth = 240;
-const RDrawerWidth = 280;
+const RDrawerWidth = 350;
 const TDrawerHeight = 90;
 const iconStyle = {
   height: "22px",
@@ -28,6 +29,16 @@ const iconStyle = {
 const listItemStyle = {
   margin: "10px 0",
 };
+
+const onlineUsers = [
+  "Raunak Pandey",
+  "Abhishek Choudary",
+  "Vedika Jamwal",
+  "Rishi Thakur",
+  "Sandeep Gupta",
+  "Paren Ghosh",
+  "Shubham Rai",
+];
 
 const Sidebar = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -114,11 +125,27 @@ const Sidebar = () => {
           "& .MuiDrawer-paper": {
             width: RDrawerWidth,
             boxSizing: "border-box",
+            backgroundColor: "#f0f0f0",
           },
         }}
         variant="permanent"
         anchor="right"
-      ></Drawer>
+      >
+        <Typography
+          variant="h5"
+          fontWeight="bold"
+          mt="40px"
+          mb="15px"
+          sx={{ paddingLeft: "1rem" }}
+        >
+          Online
+        </Typography>
+        <div>
+          {onlineUsers.map((user) => {
+            return <UserCard name={user} />;
+          })}
+        </div>
+      </Drawer>
     </Box>
   );
 };

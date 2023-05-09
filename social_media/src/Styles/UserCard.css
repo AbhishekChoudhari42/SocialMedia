@@ -1,0 +1,23 @@
+.user-card {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 1rem;
+  margin: 1rem;
+  width: 90%;
+  height: 70px;
+  border-radius: 50px;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  background-image: url("https://picsum.photos/50/50");
+  background-size: cover;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.user-name {
+}
