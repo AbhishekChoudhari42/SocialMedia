@@ -3,6 +3,7 @@ import RightSideBar from "./RightSideBar";
 import TopSideBar from "./TopSideBar";
 import LeftSideBar from "./LeftSideBar";
 import { CssBaseline, Box } from "@mui/material";
+import Posts from "../Posts";
 
 const LDrawerWidth = 240;
 const RDrawerWidth = 350;
@@ -14,13 +15,19 @@ const Sidebars = () => {
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
 
+        <LeftSideBar lbarWidth={LDrawerWidth} />
+
         <TopSideBar
           barHeight={TDrawerHeight}
           lBarWidth={LDrawerWidth}
           rBarWidth={RDrawerWidth}
         />
 
-        <LeftSideBar lbarWidth={LDrawerWidth} />
+        <Posts
+          lMargin={LDrawerWidth}
+          rMargin={RDrawerWidth}
+          tMargin={TDrawerHeight}
+        />
 
         <RightSideBar barWidth={RDrawerWidth} />
       </Box>
