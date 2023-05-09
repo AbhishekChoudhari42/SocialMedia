@@ -1,8 +1,9 @@
-import React from "react";
+import { React, useState } from "react";
 import { AiFillHome, AiFillSetting } from "react-icons/ai";
 import { BsFillChatFill } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { FiLogOut } from "react-icons/fi";
+import SearchBar from "./SearchBar";
 import {
   Typography,
   ListItemText,
@@ -17,7 +18,7 @@ import {
 
 const LDrawerWidth = 240;
 const RDrawerWidth = 280;
-
+const TDrawerHeight = 90;
 const iconStyle = {
   height: "22px",
   width: "22px",
@@ -29,9 +30,29 @@ const listItemStyle = {
 };
 
 const Sidebar = () => {
+  const [searchQuery, setSearchQuery] = useState("");
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
+      <Drawer
+        sx={{
+          height: TDrawerHeight,
+          flexShrink: 0,
+          "& .MuiDrawer-paper": {
+            height: TDrawerHeight,
+            boxSizing: "border-box",
+            marginLeft: `${LDrawerWidth}px`,
+            marginRight: `${RDrawerWidth}px`,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          },
+        }}
+        variant="permanent"
+        anchor="top"
+      >
+        <SearchBar setSearchQuery={setSearchQuery} />
+      </Drawer>
       <Drawer
         sx={{
           width: LDrawerWidth,
@@ -45,7 +66,7 @@ const Sidebar = () => {
         anchor="left"
       >
         <Toolbar>
-          <Typography variant="h5" fontWeight="bold" mt="50px" mb="15px">
+          <Typography variant="h5" fontWeight="bold" mt="40px" mb="15px">
             Memestagram
           </Typography>
         </Toolbar>
@@ -84,6 +105,8 @@ const Sidebar = () => {
           </ListItem>
         </List>
       </Drawer>
+
+      {/*custom components here*/}
       <Drawer
         sx={{
           width: RDrawerWidth,
