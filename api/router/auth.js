@@ -9,7 +9,8 @@ const {checkAuth,cookieSetter,generateToken} = require('../utils/cookiefunctions
 
 router.post("/register",asyncError(async(req,res) => {
 
-    const {name,email,password} = req.body;
+    const
+    {name,email,password} = req.body;
     
     await dbconn();
     
