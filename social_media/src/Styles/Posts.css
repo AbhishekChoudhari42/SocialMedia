@@ -56,4 +56,14 @@
 .post-buttons {
   display: flex;
   align-items: center;
+  margin: 10px 3px;
+  gap: 1rem;
+}
+
+.post-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
 }

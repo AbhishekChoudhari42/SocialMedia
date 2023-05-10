@@ -1,6 +1,8 @@
 import React from "react";
 import "../Styles/Posts.css";
 import UserIcon from "./UserIcon";
+import { FaRegHeart, FaRegComment, FaEllipsisH } from "react-icons/fa";
+import { FiSend } from "react-icons/fi";
 
 const Posts = ({ lMargin, rMargin, tMargin }) => {
   return (
@@ -22,10 +24,10 @@ const Posts = ({ lMargin, rMargin, tMargin }) => {
           </div>
           <img className="post-image" src="https://picsum.photos/1920/1080" />
           <div className="post-buttons">
-            <button>Like</button>
-            <button>Comment</button>
-            <button>Share</button>
-            <button>more</button>
+            <FaRegHeart className="post-btn btn-like" />
+            <FaRegComment className="post-btn btn-comment" />
+            <FiSend className="post-btn btn-share" />
+            <FaEllipsisH className="post-btn btn-more" />
           </div>
         </div>
       </div>
