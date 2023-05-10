@@ -4,7 +4,7 @@ import "../Styles/UserIcon.css";
 const UserIcon = ({ isOnline }) => {
   let status;
   if (isOnline) {
-    status = <span class="status-dot" />;
+    status = <span className="status-dot" />;
   } else {
     status = "";
   }

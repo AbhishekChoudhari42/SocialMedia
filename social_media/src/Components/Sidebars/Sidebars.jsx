@@ -3,7 +3,7 @@ import RightSideBar from "./RightSideBar";
 import TopSideBar from "./TopSideBar";
 import LeftSideBar from "./LeftSideBar";
 import { CssBaseline, Box } from "@mui/material";
-import Posts from "../Posts";
+import PostsCard from "../PostsCard";
 
 const LDrawerWidth = 240;
 const RDrawerWidth = 350;
@@ -23,7 +23,7 @@ const Sidebars = () => {
           rBarWidth={RDrawerWidth}
         />
 
-        <Posts
+        <PostsCard
           lMargin={LDrawerWidth}
           rMargin={RDrawerWidth}
           tMargin={TDrawerHeight}
