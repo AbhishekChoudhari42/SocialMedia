@@ -10,7 +10,6 @@
 }
 
 .post-card {
-  width: 700px;
   background-color: white;
   margin: 1rem;
   border-radius: 8px;
@@ -19,6 +18,19 @@
   box-shadow: 0 13px 27px -5px #32325d40, 0 8px 16px -8px #0000004d,
     0 -6px 16px -6px #00000008;
   padding: 1rem;
+  min-width: 600px;
+  max-width: 600px;
+}
+
+.post-uploader {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.uploader-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
 }
 
 .post-card img {

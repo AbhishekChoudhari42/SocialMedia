@@ -9,8 +9,18 @@ const Posts = ({ lMargin, rMargin, tMargin }) => {
         style={{ margin: `${tMargin}px ${rMargin}px 0 ${lMargin}px` }}
       >
         <div className="post-card">
-          <img src="https://picsum.photos/600/200" />
-          <div className="post-buttons"></div>
+          {/* <div className="post-uploader">
+            <img src="https://picsum.photos/50/50" />
+            <p>Raunak Pandey</p>
+          </div> */}
+          <img className="uploader-img" src="https://picsum.photos/50/50" />
+          <img src="https://picsum.photos/1920/1080" />
+          <div className="post-buttons">
+            <button>Like</button>
+            <button>Comment</button>
+            <button>Share</button>
+            <button>more</button>
+          </div>
         </div>
       </div>
     </>
