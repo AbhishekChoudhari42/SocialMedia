@@ -12,7 +12,7 @@
 .post-card {
   background-color: white;
   margin: 1rem;
-  border-radius: 8px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 13px 27px -5px #32325d40, 0 8px 16px -8px #0000004d,
@@ -22,18 +22,20 @@
   max-width: 600px;
 }
 
-.post-uploader {
+.post-head {
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid red;
 }
 
-.uploader-img {
-  width: 40px;
-  height: 40px;
-  margin-right: 0.5rem;
+.post-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border: 1px solid blue;
 }
 
-.post-card img {
+.post-image {
   object-fit: cover;
   width: 100%;
   border-radius: 8px;

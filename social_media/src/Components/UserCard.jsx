@@ -1,12 +1,13 @@
 import React from "react";
 import "../Styles/UserCard.css";
+import UserIcon from "./UserIcon";
 
 const UserCard = ({ name }) => {
   return (
     <>
       <div className="user-card">
-        <div className="user-image"></div>
-        <h3 className="user-name">{name}</h3>
+        <UserIcon isOnline={true} />
+        <p className="user-name">{name}</p>
       </div>
     </>
   );
