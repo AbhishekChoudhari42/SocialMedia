@@ -25,14 +25,26 @@
 .post-head {
   display: flex;
   align-items: center;
-  border: 1px solid red;
 }
 
 .post-details {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  border: 1px solid blue;
+  margin-bottom: 10px;
+}
+
+.post-author {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.post-upload-date-time {
+  font-size: 0.8rem;
+}
+
+.post-title {
+  margin: 7px 0;
 }
 
 .post-image {

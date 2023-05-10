@@ -13,9 +13,12 @@ const Posts = ({ lMargin, rMargin, tMargin }) => {
           <div className="post-head">
             <UserIcon isOnline={false} />
             <div className="post-details">
-              <p className="post-author">Raunak Pandey</p>
-              <p className="post-upload-date-time">May 08 at 10:10AM</p>
+              <div className="post-author">Raunak Pandey</div>
+              <div className="post-upload-date-time">May 08 at 10:10AM</div>
             </div>
+          </div>
+          <div className="post-title">
+            Checkout this beautiful picture I clicked 📸
           </div>
           <img className="post-image" src="https://picsum.photos/1920/1080" />
           <div className="post-buttons">
