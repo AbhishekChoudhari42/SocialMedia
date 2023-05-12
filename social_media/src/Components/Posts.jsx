@@ -20,14 +20,14 @@ const Posts = () => {
         "you can now call yourself a photographer 😂",
         "Which camera did you use to click this? 🤔",
       ],
-      date: "May 08",
-      time: "10:10AM",
+      date: "Saturday, 12 June 2021",
+      time: "01:58 AM",
     },
     {
-      author: "Terry Medhurst",
-      title: "His mother had always taught him",
+      author: "Emily Martinson",
+      title: "Exploring My New Hometown",
       image: "https://picsum.photos/1920/1080",
-      likeCount: 515,
+      likeCount: 38,
       comments: [
         "Nice click 😄",
         "Awesome click bro 🔥",
@@ -39,10 +39,10 @@ const Posts = () => {
       time: "10:10AM",
     },
     {
-      author: "Henrietta Higgins",
-      title: "Check out this beautiful picture I just CLicked 📸",
+      author: "Sarah Thompson",
+      title: "Sunset on the Beach",
       image: "https://picsum.photos/1920/1080",
-      likeCount: 108,
+      likeCount: 20,
       comments: [
         "Nice click 😄",
         "Awesome click bro 🔥",
@@ -54,10 +54,10 @@ const Posts = () => {
       time: "10:10AM",
     },
     {
-      author: "Raunak Pandey",
-      title: "Check out this beautiful picture I just CLicked 📸",
+      author: "David Johnson",
+      title: "My Favorite Travel Destination",
       image: "https://picsum.photos/1920/1080",
-      likeCount: 108,
+      likeCount: 47,
       comments: [
         "Nice click 😄",
         "Awesome click bro 🔥",
@@ -69,10 +69,10 @@ const Posts = () => {
       time: "10:10AM",
     },
     {
-      author: "Raunak Pandey",
-      title: "Check out this beautiful picture I just CLicked 📸",
+      author: "Rachel Lee",
+      title: "Check out this A Day in the Life picture I just CLicked 📸",
       image: "https://picsum.photos/1920/1080",
-      likeCount: 108,
+      likeCount: 7678,
       comments: [
         "Nice click 😄",
         "Awesome click bro 🔥",
@@ -84,10 +84,10 @@ const Posts = () => {
       time: "10:10AM",
     },
     {
-      author: "Raunak Pandey",
-      title: "Check out this beautiful picture I just CLicked 📸",
+      author: "Michael Wilson",
+      title: "Check Trying Out a New Recipe",
       image: "https://picsum.photos/1920/1080",
-      likeCount: 108,
+      likeCount: 18354,
       comments: [
         "Nice click 😄",
         "Awesome click bro 🔥",
@@ -99,10 +99,10 @@ const Posts = () => {
       time: "10:10AM",
     },
     {
-      author: "Raunak Pandey",
-      title: "Check out this beautiful picture I just CLicked 📸",
+      author: "Amanda Smith",
+      title: "Weekend Adventure",
       image: "https://picsum.photos/1920/1080",
-      likeCount: 108,
+      likeCount: 4201407659,
       comments: [
         "Nice click 😄",
         "Awesome click bro 🔥",
@@ -114,8 +114,8 @@ const Posts = () => {
       time: "10:10AM",
     },
     {
-      author: "Raunak Pandey",
-      title: "Check out this beautiful picture I just CLicked 📸",
+      author: "Paul Chambers",
+      title: "cknsytsacbsubtqtlbtyxfdyupsjtotlkzhqqfxdchkjbwxres",
       image: "https://picsum.photos/1920/1080",
       likeCount: 108,
       comments: [
