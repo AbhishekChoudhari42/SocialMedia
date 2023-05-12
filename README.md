@@ -19,7 +19,8 @@ Details : Register : Username,Email,Password
   storybook  
   react-icons  
 
-### 2. Backend:   ExpressJS  
+### 2. Backend:  
+ExpressJS  
 Mongoose  
 Socket.io  
 

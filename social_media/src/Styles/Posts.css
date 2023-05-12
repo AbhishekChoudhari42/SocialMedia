@@ -1,0 +1,58 @@
+.post-card {
+  background-color: white;
+  margin: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 13px 27px -5px #32325d40, 0 8px 16px -8px #0000004d,
+    0 -6px 16px -6px #00000008;
+  padding: 1rem;
+  min-width: 600px;
+  max-width: 600px;
+}
+
+.post-head {
+  display: flex;
+  align-items: center;
+}
+
+.post-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-bottom: 10px;
+}
+
+.post-author {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.post-upload-date-time {
+  font-size: 0.8rem;
+}
+
+.post-title {
+  margin: 7px 0;
+}
+
+.post-image {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.post-buttons {
+  display: flex;
+  align-items: center;
+  margin: 10px 3px;
+  gap: 1rem;
+}
+
+.post-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
