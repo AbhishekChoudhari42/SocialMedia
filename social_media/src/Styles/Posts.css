@@ -46,9 +46,14 @@
   display: flex;
   align-items: center;
   margin: 10px 3px;
-  gap: 1rem;
 }
 
+.post-like-count,
+.post-comment-count {
+  font-size: 0.8rem;
+  margin-left: 3px;
+  margin-right: 1rem;
+}
 .post-btn {
   border: none;
   outline: none;
