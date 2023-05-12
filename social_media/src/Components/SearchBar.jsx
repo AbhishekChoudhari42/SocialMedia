@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import "../Styles/SearchBar.css";
 import { TfiSearch } from "react-icons/tfi";

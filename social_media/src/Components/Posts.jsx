@@ -1,4 +1,6 @@
-import { React, useState, useEffect } from "react";
+// eslint-disable-next-line no-unused-vars
+import React from 'react'
+import { useState, useEffect } from "react";
 import axios from "axios";
 import "../Styles/Posts.css";
 import UserIcon from "./UserIcon";
@@ -20,9 +22,9 @@ const Posts = () => {
   if (posts.length === 0) {
     return <h3>No Memes available!</h3>;
   } else {
-    return posts.map((meme) => {
+    return posts.map((meme,index) => {
       return (
-        <div className="post-card">
+        <div key={index} className="post-card">
           <div className="post-head">
             <UserIcon isOnline={false} />
             <div className="post-details">
