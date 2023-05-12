@@ -36,7 +36,9 @@ const Posts = () => {
           <img className="post-image" src={`${meme.url}`} />
           <div className="post-buttons">
             <FaRegHeart className="post-btn btn-like" />
+            <div className="post-like-count">{meme.ups}</div>
             <FaRegComment className="post-btn btn-comment" />
+            <div className="post-comment-count">{8}</div>
             <FiSend className="post-btn btn-share" />
             <FaEllipsisH className="post-btn btn-more" />
           </div>
