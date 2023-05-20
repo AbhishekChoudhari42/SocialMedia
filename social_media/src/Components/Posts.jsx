@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "../Styles/Posts.css";
@@ -19,19 +19,42 @@ const Posts = () => {
     });
   }, []);
 
+  const getRandomDateAndTime = () => {
+    let day = Math.floor(Math.random() * (30 - 1 + 1)) + 1;
+    let month = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+    let year = Math.floor(Math.random() * (23 - 0 + 1)) + 0;
+    if (year < 10) {
+      year = `0${year}`;
+    }
+
+    let date = `${day}/${month}/${year}`;
+
+    let hour = Math.floor(Math.random() * (23 - 0 + 1)) + 0;
+    if (hour < 10) {
+      hour = `0${hour}`;
+    }
+    let minute = Math.floor(Math.random() * (59 - 0 + 1)) + 0;
+    if (minute < 10) {
+      minute = `0${minute}`;
+    }
+
+    let time = `${hour}:${minute}`;
+    return `${date} at ${time}`;
+  };
+
   if (posts.length === 0) {
     return <h3>No Memes available!</h3>;
   } else {
-    return posts.map((meme,index) => {
+    return posts.map((meme, index) => {
       return (
         <div key={index} className="post-card">
           <div className="post-head">
             <UserIcon isOnline={false} />
             <div className="post-details">
               <div className="post-author">{meme.author}</div>
-              <div className="post-upload-date-time">{`${
-                12 / 15 / 2047
-              } at ${77}`}</div>
+              <div className="post-upload-date-time">
+                {getRandomDateAndTime()}
+              </div>
             </div>
           </div>
           <div className="post-title">{meme.title}</div>
