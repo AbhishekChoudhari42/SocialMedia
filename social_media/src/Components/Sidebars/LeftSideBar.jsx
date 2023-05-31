@@ -12,12 +12,20 @@ import {
   Toolbar,
   Drawer,
 } from "@mui/material";
+import { createGlobalStyle } from "styled-components";
 
 const iconStyle = {
   height: "22px",
   width: "22px",
   marginRight: "10px",
 };
+
+const LogoFont = createGlobalStyle`
+@font-face {
+  font-family: 'InstagramFont';
+  src: url('../../fonts/Fontspring-DEMO-blue_vinyl_bold_ps_ot.otf');
+}
+`;
 
 const listItemStyle = {
   margin: "10px 0",
@@ -38,7 +46,13 @@ const LeftSideBar = ({ lbarWidth }) => {
         anchor="left"
       >
         <Toolbar>
-          <Typography variant="h5" fontWeight="bold" mt="40px" mb="15px">
+          <LogoFont />
+          <Typography
+            variant="h5"
+            sx={{ fontFamily: "InstagramFont" }}
+            mt="40px"
+            mb="15px"
+          >
             Memestagram
           </Typography>
         </Toolbar>
