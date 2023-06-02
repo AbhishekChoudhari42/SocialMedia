@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import SignIn from "./Components/Login/SignIn";
-import SignUp from "./Components/Login/SignUp";
+import SignIn from "./authentication/SignIn";
+import SignUp from "./authentication/SignUp";
 import Home from "./pages/Home";
 
 const RouterPaths = () => {

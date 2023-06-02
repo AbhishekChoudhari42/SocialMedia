@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import UserIcon from "./UserIcon";
+import UserIcon from "../Components/UserIcon";
 
 const SuggestedProfileNames = [
   "Nelle Leonard",

@@ -1,6 +1,6 @@
-import Sidebar from "../Components/Sidebar";
+import Sidebar from "../layout/Sidebar";
 import styled from "@emotion/styled";
-import Suggestions from "../Components/Suggestions";
+import Suggestions from "../layout/Suggestions";
 import Stories from "../Components/Stories";
 import Posts from "../Components/Posts";
 
