@@ -18,6 +18,11 @@ const StoriesContainer = styled.div`
   margin-bottom: 1rem;
   overflow-x: scroll;
   flex-shrink: 0;
+  transition: 0.3s;
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 `;
 
 const Story = styled.div`

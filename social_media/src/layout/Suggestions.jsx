@@ -20,6 +20,10 @@ const SuggestionsContainer = styled.div`
   display: flex;
   flex-direction: column;
   color: white;
+
+  @media (max-width: 1300px) {
+    display: none;
+  }
 `;
 
 const ProfilePicName = styled.div`

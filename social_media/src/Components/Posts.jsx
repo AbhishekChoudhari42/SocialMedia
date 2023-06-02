@@ -19,6 +19,11 @@ const PostContainer = styled.div`
   flex-direction: column;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  transition: 0.3s;
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 `;
 
 const PostHeader = styled.div`
@@ -26,6 +31,10 @@ const PostHeader = styled.div`
   flex-direction: row;
   width: 100%;
   align-items: center;
+
+  @media (max-width: 700px) {
+    padding: 0 0.3rem;
+  }
 `;
 
 const PostAuthorNTime = styled.div`
@@ -60,10 +69,14 @@ const PostMenuBtn = styled.div`
 `;
 
 const PostCaption = styled.div`
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+
+  @media (max-width: 700px) {
+    padding: 0 0.5rem;
+  }
 `;
 
 const PostMedia = styled.img`
@@ -79,6 +92,13 @@ const PostFooter = styled.div`
   width: 100%;
   padding: 1rem 0;
   gap: 1rem;
+
+  @media (max-width: 700px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 `;
 
 const IconWrapper = styled.div`
