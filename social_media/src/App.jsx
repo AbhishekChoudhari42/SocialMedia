@@ -1,8 +1,5 @@
-import Sidebars from "./Components/Sidebars/Sidebars";
-import SignIn from "./Components/Login/SignIn";
-import "./Styles/App.css";
-import SignUp from "./Components/Login/SignUp";
 import RouterPaths from "./RouterPaths";
+import "./App.css";
 
 function App() {
   return (

@@ -1,16 +1,138 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
+import styled from "styled-components";
+import UserIcon from "./UserIcon";
+import {
+  FaRegHeart,
+  FaRegComment,
+  FaEllipsisH,
+  FaRegBookmark,
+} from "react-icons/fa";
+import { FiSend } from "react-icons/fi";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "../Styles/Posts.css";
-import UserIcon from "./UserIcon";
-import { FaRegHeart, FaRegComment, FaEllipsisH } from "react-icons/fa";
-import { FiSend } from "react-icons/fi";
 
 //creating a demo Posts file that will be replaced with a Json file in future.
 const BASE_URL = "https://meme-api.com/gimme/ProgrammerHumor/50";
+//#region
+const PostContainer = styled.div`
+  display: flex;
+  width: 600px;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+`;
 
-const Posts = () => {
+const PostHeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+`;
+
+const PostAuthorNTime = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const PostAuthor = styled.p`
+  font-size: 1rem;
+  font-weight: 400;
+`;
+
+const PostTime = styled.p`
+  font-size: 0.8rem;
+  color: gray;
+  margin-top: 0.2rem;
+`;
+
+const PostMenuBtn = styled.div`
+  color: white;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+
+  &:hover {
+    cursor: pointer;
+    color: gray;
+  }
+`;
+
+const PostCaption = styled.div`
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+`;
+
+const PostMedia = styled.img`
+  object-fit: cover;
+  width: 100%;
+  border-radius: 2px;
+`;
+
+const PostFooter = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  gap: 1rem;
+`;
+
+const IconWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+const HeartIcon = styled(FaRegHeart)`
+  height: 25px;
+  width: 25px;
+
+  &:hover {
+    color: gray;
+    cursor: pointer;
+  }
+`;
+const CommentIcon = styled(FaRegComment)`
+  height: 25px;
+  width: 25px;
+
+  &:hover {
+    color: gray;
+    cursor: pointer;
+  }
+`;
+
+const ShareIcon = styled(FiSend)`
+  padding-top: 0.1rem;
+  height: 25px;
+  width: 25px;
+
+  &:hover {
+    color: gray;
+    cursor: pointer;
+  }
+`;
+const SaveIcon = styled(FaRegBookmark)`
+  height: 25px;
+  width: 25px;
+  margin-left: auto;
+
+  &:hover {
+    color: gray;
+    cursor: pointer;
+  }
+`;
+const LikeCount = styled.p`
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+`;
+//#endregion
+
+const Post = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -47,30 +169,43 @@ const Posts = () => {
   } else {
     return posts.map((meme, index) => {
       return (
-        <div key={index} className="post-card">
-          <div className="post-head">
-            <UserIcon isOnline={false} />
-            <div className="post-details">
-              <div className="post-author">{meme.author}</div>
-              <div className="post-upload-date-time">
-                {getRandomDateAndTime()}
-              </div>
-            </div>
-          </div>
-          <div className="post-title">{meme.title}</div>
-          <img className="post-image" src={`${meme.url}`} />
-          <div className="post-buttons">
-            <FaRegHeart className="post-btn btn-like" />
-            <div className="post-like-count">{meme.ups}</div>
-            <FaRegComment className="post-btn btn-comment" />
-            <div className="post-comment-count">{8}</div>
-            <FiSend className="post-btn btn-share" />
-            <FaEllipsisH className="post-btn btn-more" />
-          </div>
-        </div>
+        <PostContainer key={meme.author + index}>
+          <PostHeader>
+            <UserIcon
+              isOnline={false}
+              isStory={false}
+              height={40}
+              width={40}
+              mr={1}
+            />
+            <PostAuthorNTime>
+              <PostAuthor>{meme.author}</PostAuthor>
+              <PostTime>{getRandomDateAndTime()}</PostTime>
+            </PostAuthorNTime>
+            <PostMenuBtn>
+              <FaEllipsisH />
+            </PostMenuBtn>
+          </PostHeader>
+          <PostCaption>{meme.title}</PostCaption>
+          <PostMedia src={`${meme.url}`} />
+          <PostFooter>
+            <IconWrapper>
+              <HeartIcon />
+              <LikeCount>{meme.ups}</LikeCount>
+            </IconWrapper>
+            <IconWrapper>
+              <CommentIcon />
+              <LikeCount>{8}</LikeCount>
+            </IconWrapper>
+            <IconWrapper>
+              <ShareIcon />
+            </IconWrapper>
+            <SaveIcon />
+          </PostFooter>
+        </PostContainer>
       );
     });
   }
 };
 
-export default Posts;
+export default Post;

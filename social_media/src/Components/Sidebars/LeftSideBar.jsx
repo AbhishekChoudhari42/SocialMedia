@@ -1,4 +1,3 @@
-import React from "react";
 import { AiFillHome, AiFillSetting } from "react-icons/ai";
 import { BsFillChatFill } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
